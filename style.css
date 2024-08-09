@@ -1,0 +1,56 @@
+body{
+    display: flex;
+    justify-content: center; /* Центрирует контейнер на странице */
+    align-items: center; /* Центрирует контейнер по вертикали */
+    height: 100vh; /* Высота всего экрана */
+    margin: 0; /* Убирает отступы по умолчанию */
+    background: rgb(231, 211, 211);
+}
+.container {
+    display: flex; /* Используем Flexbox для контейнера */
+    align-items: flex-start; /* Вертикальное выравнивание */
+}
+#myCanvas{
+    flex: 1;
+    background: lightgrey;
+    border: 1px solid black; /* Добавляет рамку вокруг canvas для лучшей видимости */
+    margin-right: 20px; /* Отступ между ползунком и canvas */
+}
+.slidecontainer {
+    flex: 1; /* Ползунки занимают оставшуюся часть контейнера */
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column; /* Устанавливаем вертикальное расположение */
+    justify-content: flex-start; /* Располагаем ползунки вверху */
+    padding-top: 10px; /* Отступ слева для ползунков */
+    gap: 10px; /* Задайте необходимый отступ между элементами */
+}
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
